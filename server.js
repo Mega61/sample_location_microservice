@@ -5,8 +5,8 @@ const bodyParser = require("body-parser")
 const aboutRouter = require("./routes/about");
 const locationRouter = require("./routes/location");
 
-const PORT = 4000;
-const HOST_NAME = "127.0.0.2";
+const PORT = process.env.QA_PORT;
+const HOST_NAME = process.env.QA_HOST_NAME;
 
 const app = express();
 app.use(cors());
